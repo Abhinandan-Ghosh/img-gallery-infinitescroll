@@ -14,7 +14,7 @@ const Header = () => {
       fluid
     >
       <Container className="text-center">
-        <h3>Image Gallery</h3>
+        <h4>An Image Gallery with Infine Scroll Pagination</h4>
       </Container>
     </Jumbotron>
   );

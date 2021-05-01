@@ -26,18 +26,19 @@ function App() {
     <div className="App">
       <NavbarComp />
       <Header />
-      <CardColumns>
-        <InfiniteScroll
-          dataLength={images.length}
-          next={fetchNextImgs}
-          hasMore={true}
-          loader={<Loader />}
-        >
+
+      <InfiniteScroll
+        dataLength={images.length}
+        next={fetchNextImgs}
+        hasMore={true}
+        loader={<Loader />}
+      >
+        <CardColumns>
           {images.map((image) => (
             <GalleryImg imgurl={image.download_url} key={image.id} />
           ))}
-        </InfiniteScroll>
-      </CardColumns>
+        </CardColumns>
+      </InfiniteScroll>
     </div>
   );
 }
